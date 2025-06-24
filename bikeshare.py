@@ -188,10 +188,18 @@ def user_stats(df, city):
 
 def display_raw_data(df):
     """
-    displays 5 lines of raw data.
-    
+    Displays 5 lines of raw data at a time upon user request.
+
+    Args:
+        df (pd.DataFrame): DataFrame containing bikeshare data.
     """
-    show_data = input("Would you like to see raw data? Enter yes or no: ").strip().lower()
+    while True:
+        show_data = input("Would you like to see raw data? Enter yes or no: ").strip().lower()
+        if show_data not in ['yes', 'no']:
+            print("Please enter 'yes' or 'no'.")
+            continue
+        break
+
     i = 0
     while show_data == 'yes':
         print(df.iloc[i:i+5])
@@ -199,7 +207,12 @@ def display_raw_data(df):
         if i >= len(df):
             print("No more data to display.")
             break
-        show_data = input("Would you like to see 5 more lines of data? Enter yes or no: ").strip().lower()
+        while True:
+            show_data = input("Would you like to see 5 more lines of data? Enter yes or no: ").strip().lower()
+            if show_data not in ['yes', 'no']:
+                print("Please enter 'yes' or 'no'.")
+            else:
+                break
 
 def main():
     """Main function that runs the bikeshare analysis."""
