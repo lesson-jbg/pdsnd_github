@@ -94,6 +94,7 @@ def load_data(city, month, day):
         day_name = ['Sunday', 'Monday', 'Tuesday', 'Wednesday',
                     'Thursday', 'Friday', 'Saturday'][day - 1]
         df = df[df['Day Name'] == day_name]
+    print(f"\nData loaded successfully for {city.title()} with {len(df)} records after filtering.\n")
 
     return df
 
