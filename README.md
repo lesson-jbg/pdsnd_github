@@ -34,5 +34,19 @@ The project is implemented in Python and is intended for educational purposes as
 ### How to Run
 You can run the program using any Python 3 environment:
 
+
+
+
 ```bash
 python bikeshare.py
+```
+
+### Future Improvements
+
+- Add support for filtering by specific date ranges
+- Create a GUI version of the application for non-technical users
+- Visualize key statistics using charts and graphs
+- Export results to CSV or PDF format for reporting
+
+
+
